@@ -1,0 +1,49 @@
+.title {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+.text {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.elements {
+  width: 100%;
+  display: flexbox;
+  margin: auto;
+}
+
+.child {
+  flex: 1;
+  margin: 10px;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+.crowd-element{
+  width: 37px;
+  height: auto;
+}
+
+h2 {
+  display: inline-block;
+  font-family: 'Rubik', sans-serif;
+}
+
+input {
+  margin-bottom: 20px;
+  height: 40px;
+  width:99%;
+}
