@@ -1,14 +1,25 @@
 import React from 'react';
 import {useState} from "react";
 import logo from './logo.svg';
+import personred from './person-red.svg';
+import personblue from './person-blue.svg';
 import './App.css';
 
-function RenderElement(amount) {
+function RenderElement(amount, color) {
   let crowd = new Array();
-  for(let i = 0; i < amount; i++) {
-    crowd.push(<img class ="crowd-element" src= "https://www.flaticon.com/svg/static/icons/svg/57/57117.svg"></img>);
-  }
-return (crowd);
+  switch(color) {
+    case 0:
+      for(let i = 0; i < amount; i++) {
+        crowd.push(<img class ="crowd-element" src= {personred}></img>);
+      }
+      break;
+    case 1:
+        for(let i = 0; i < amount; i++) {
+          crowd.push(<img class ="crowd-element" src= {personblue}></img>);
+        }
+      break;
+    }
+  return (crowd);
 }
 
 
@@ -33,7 +44,7 @@ function App() {
             <input type="text" placeholder = "Crowd amount... Warning! Entering high values (approx value>25000) will slow down your browser significantly." onChange = {changeInputL}/>
             <div class = "elements">
               {
-                RenderElement(crowdL)
+                RenderElement(crowdL, 0)
               }
             </div>
           </div>
@@ -42,7 +53,7 @@ function App() {
             <input type="text" placeholder = "Crowd amount... Warning! Entering high values (approx value>25000) will slow down your browser significantly." onChange = {changeInputR}/>
             <div class = "elements">
               {
-                RenderElement(crowdR)
+                RenderElement(crowdR, 1)
               }
             </div>
           </div>
